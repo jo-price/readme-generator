@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
 import fs from 'fs';
-import generateMarkdown from "./utils/generateMarkdown";
+import path from 'path';
+import generateMarkdown from "./generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
 inquirer
@@ -40,39 +41,22 @@ inquirer
         type: 'rawlist',
         name: 'license',
         message: 'What type of license is this project under?',
-        choices: ['MIT', 'no license'],
+        choices: ['MIT', 'APACHE2.0', 'Boost1.0', 'MPL2.0', 'BSD2', 'BSD3'],
     }
     ])
 
-//function ask() {
-//    inquirer.prompt(questions).then(answers) = 
-//        console.log(answers.title);
-//        console.log(answers.description);
-//        console.log(answers.installation);
-//        console.log(answers.usage);
-//        console.log(answers.contributing);
-//        console.log(answers.tests);
-//    };
-
-//const questions = ['title', 'description', 'installation', 'usage', 'contributing', 'tests'];
-//const [ title, description, installation, usage, contributing, tests ] = questions;
-//{
-//    questions.forEach((questions) => console.log(questions.responses));
-//};
-
 // TODO: Create a function to write README file
-.then((data) => {
-    const filename = `${data.title.toLowerCase().split(' ').join('')}README.md`;
 
-//function writeToFile = (fileName, data) => {
-    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-        err ? console.error(err) : console.log('Readme successfully created!')
-    );
-});
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName, data));
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((responses) => {
+      console.log("Creating Professional README.md File...");
+      writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
+    });
+  }
 
-// Function call to initialize app
 init();
-
