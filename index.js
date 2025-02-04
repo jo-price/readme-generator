@@ -2,11 +2,10 @@
 import inquirer from "inquirer";
 import fs from 'fs';
 import path from 'path';
-import generateMarkdown from "./generateMarkdown.js";
+import generateMarkdown from "./utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
-inquirer
-    .prompt([
+const questions = [
     {
         type: 'input',
         name: 'title',
@@ -42,8 +41,18 @@ inquirer
         name: 'license',
         message: 'What type of license is this project under?',
         choices: ['MIT', 'APACHE2.0', 'Boost1.0', 'MPL2.0', 'BSD2', 'BSD3'],
+    },
+    {
+        type: 'input',
+        name: 'username',
+        message: 'Enter your GitHub username.',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address.',
     }
-    ])
+    ];
 
 // TODO: Create a function to write README file
 
@@ -54,7 +63,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((responses) => {
-      console.log("Creating Professional README.md File...");
+      console.log("Professional README.md File Created!");
       writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
     });
   }
