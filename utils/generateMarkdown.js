@@ -31,8 +31,9 @@ ${data.tests}
 ## License
 Licensed under the ${data.license} License.
 ## Questions
-For any questions, reach out to me via [email](mailto:${data.email}?subject=[README generator]) or visit [github/${data.userame}](https://github.com/${data.username}).
-`;
+For any questions, reach out via [email](mailto:${data.email}) or visit ${data.userame} on [GitHub][def].
+[def]: https://github.com/${data.username}
+`
 }
 
 // TODO: Create a function that returns the license section of README
