@@ -1,9 +1,6 @@
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-
-  return `
-# ${data.title}
-
+  return `# ${data.title}
 ## Description
 ${data.description}
 ## Table of Contents
@@ -24,7 +21,7 @@ ${data.tests}
 ## License
 Licensed under the ${data.license} License.
 ## Questions
-For any questions, reach out via [email](mailto:${data.email}) or visit on [GitHub](https://github.com/${data.username}).
-`
+For any questions, reach out via [email](mailto:${data.email}) or visit on [GitHub](https://github.com/${data.username}).`
 }
+
 export default generateMarkdown;

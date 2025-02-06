@@ -1,8 +1,6 @@
-
-# awgawegwaeg
-
+# awgawgweag
 ## Description
-awgawge
+wegawegawgw
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -11,14 +9,14 @@ awgawge
 * [License](#license)
 * [Questions](#questions)
 ## Installation
-awegawega
+gwaegwaegaw
 ## Usage
-awgawegaw
+gwegwagwaeg
 ## Contributors
-agwaegwa
+wegwaegewgw
 ## Testing
-3agwwagaw
+eewgagwasgw
 ## License
-Licensed under the MPL2.0 License.
+Licensed under the MIT License.
 ## Questions
-For any questions, reach out via [email](mailto:awgaega) or visit on [GitHub](https://github.com/aaeg).
+For any questions, reach out via [email](mailto:awgwagwe) or visit on [GitHub](https://github.com/agwgwgwae).
