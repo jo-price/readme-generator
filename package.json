@@ -1,25 +1,15 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "A command line application that generates a professional README",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jo-price/readme-generator.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/jo-price/readme-generator/issues"
-  },
-  "homepage": "https://github.com/jo-price/readme-generator#readme"
+  }
 }
